@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            var aInp=document.getElementsByTagName("input");
+            for(var i=0;i<aInp.length;i++){
+                aInp[i].onclick=(function(count){
+                    return function () {
+                        alert(count++)
+                    }
+                }(0))
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="show1">
+<input type="button" value="show2">
+<input type="button" value="show3">
+<input type="button" value="show4">
+<input type="button" value="show5">
+</body>
+</html>
